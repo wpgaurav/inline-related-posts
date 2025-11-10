@@ -1,6 +1,6 @@
-# Inline Related Posts
+# Interactive Related Posts
 
-**Intelligently designed Inline Related Posts plugin for WordPress with shortcode and Gutenberg Block support.**
+**Intelligently designed Interactive Related Posts plugin for WordPress with shortcode and Gutenberg Block support.**
 
 Display related posts anywhere on your WordPress site with multiple beautiful layouts, manual post selection, and flexible customization options.
 
@@ -22,19 +22,19 @@ Display related posts anywhere on your WordPress site with multiple beautiful la
 1. Download or clone this repository into your WordPress plugins directory:
    ```bash
    cd wp-content/plugins
-   git clone https://github.com/wpgaurav/inline-related-posts.git
+   git clone https://github.com/wpgaurav/interactive-related-posts.git
    ```
 
 2. Install npm dependencies and build the block:
    ```bash
-   cd inline-related-posts
+   cd interactive-related-posts
    npm install
    npm run build
    ```
 
 3. Activate the plugin through the WordPress admin panel:
    - Go to **Plugins** → **Installed Plugins**
-   - Find **Inline Related Posts** and click **Activate**
+   - Find **Interactive Related Posts** and click **Activate**
 
 ## Usage
 
@@ -44,7 +44,7 @@ Display related posts anywhere on your WordPress site with multiple beautiful la
 
 Display 6 recent posts in a 3-column grid:
 ```
-[inline_related_posts]
+[interactive_related_posts]
 ```
 
 Or use the short alias:
@@ -56,56 +56,56 @@ Or use the short alias:
 
 Select posts by IDs:
 ```
-[inline_related_posts ids="1,2,3,4,5,6"]
+[interactive_related_posts ids="1,2,3,4,5,6"]
 ```
 
 Select posts by slugs:
 ```
-[inline_related_posts slugs="my-post-slug,another-post-slug"]
+[interactive_related_posts slugs="my-post-slug,another-post-slug"]
 ```
 
 #### Layout Options
 
 Choose from different layout styles:
 ```
-[inline_related_posts layout="card" posts="8" columns="4"]
-[inline_related_posts layout="list" posts="5"]
-[inline_related_posts layout="thumbnail" columns="3"]
-[inline_related_posts layout="link-only" posts="10"]
-[inline_related_posts layout="minimal" posts="6"]
+[interactive_related_posts layout="card" posts="8" columns="4"]
+[interactive_related_posts layout="list" posts="5"]
+[interactive_related_posts layout="thumbnail" columns="3"]
+[interactive_related_posts layout="link-only" posts="10"]
+[interactive_related_posts layout="minimal" posts="6"]
 ```
 
 #### Display Customization
 
 Control what information is displayed:
 ```
-[inline_related_posts show_excerpt="true" show_date="true" show_author="true" show_category="true"]
-[inline_related_posts show_excerpt="false" show_date="false"]
+[interactive_related_posts show_excerpt="true" show_date="true" show_author="true" show_category="true"]
+[interactive_related_posts show_excerpt="false" show_date="false"]
 ```
 
 #### Query Filters
 
 Filter posts by category or tag:
 ```
-[inline_related_posts category="news" posts="6"]
-[inline_related_posts tag="featured" posts="8"]
+[interactive_related_posts category="news" posts="6"]
+[interactive_related_posts tag="featured" posts="8"]
 ```
 
 Order posts:
 ```
-[inline_related_posts orderby="title" order="ASC"]
-[inline_related_posts orderby="rand" posts="6"]
+[interactive_related_posts orderby="title" order="ASC"]
+[interactive_related_posts orderby="rand" posts="6"]
 ```
 
 Exclude specific posts:
 ```
-[inline_related_posts exclude="1,2,3"]
+[interactive_related_posts exclude="1,2,3"]
 ```
 
 #### Complete Example
 
 ```
-[inline_related_posts
+[interactive_related_posts
     layout="card"
     posts="9"
     columns="3"
@@ -122,7 +122,7 @@ Exclude specific posts:
 
 1. Open the WordPress Block Editor
 2. Click the **+** button to add a new block
-3. Search for **"Inline Related Posts"**
+3. Search for **"Interactive Related Posts"**
 4. Click to insert the block
 
 #### Block Settings
@@ -196,14 +196,14 @@ Clean, text-focused layout with subtle hover effects.
 
 You can override plugin templates in your theme:
 
-1. Create directory: `your-theme/inline-related-posts/`
-2. Copy template from `plugins/inline-related-posts/templates/`
+1. Create directory: `your-theme/interactive-related-posts/`
+2. Copy template from `plugins/interactive-related-posts/templates/`
 3. Modify as needed
 
 Example:
 ```
 your-theme/
-└── inline-related-posts/
+└── interactive-related-posts/
     ├── card.php
     ├── grid.php
     └── custom.php
@@ -264,7 +264,7 @@ npm run build
 ### Project Structure
 
 ```
-inline-related-posts/
+interactive-related-posts/
 ├── assets/
 │   ├── css/
 │   │   ├── styles.css      # Frontend styles
@@ -288,7 +288,7 @@ inline-related-posts/
 │   ├── thumbnail.php
 │   ├── link-only.php
 │   └── minimal.php
-├── inline-related-posts.php  # Main plugin file
+├── interactive-related-posts.php  # Main plugin file
 └── package.json
 ```
 
@@ -303,4 +303,4 @@ WP Gaurav - [GitHub](https://github.com/wpgaurav)
 ## Support
 
 For issues, questions, or contributions, please visit:
-https://github.com/wpgaurav/inline-related-posts/issues
+https://github.com/wpgaurav/interactive-related-posts/issues

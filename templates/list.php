@@ -52,7 +52,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <div class="irp-list-meta">
                     <?php if ( ! empty( $args['show_author'] ) ) : ?>
                         <span class="irp-list-author">
-                            <?php echo esc_html__( 'By', 'inline-related-posts' ); ?> <?php echo esc_html( $post_data['author'] ); ?>
+                            <?php echo esc_html__( 'By', 'interactive-related-posts' ); ?> <?php echo esc_html( $post_data['author'] ); ?>
                         </span>
                     <?php endif; ?>
 

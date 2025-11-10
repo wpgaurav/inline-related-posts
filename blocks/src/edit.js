@@ -70,26 +70,26 @@ export default function Edit({ attributes, setAttributes, clientId }) {
 
 	// Layout options
 	const layoutOptions = [
-		{ label: __('Grid', 'inline-related-posts'), value: 'grid' },
-		{ label: __('Card', 'inline-related-posts'), value: 'card' },
-		{ label: __('List', 'inline-related-posts'), value: 'list' },
-		{ label: __('Thumbnail', 'inline-related-posts'), value: 'thumbnail' },
-		{ label: __('Link Only', 'inline-related-posts'), value: 'link-only' },
-		{ label: __('Minimal', 'inline-related-posts'), value: 'minimal' },
+		{ label: __('Grid', 'interactive-related-posts'), value: 'grid' },
+		{ label: __('Card', 'interactive-related-posts'), value: 'card' },
+		{ label: __('List', 'interactive-related-posts'), value: 'list' },
+		{ label: __('Thumbnail', 'interactive-related-posts'), value: 'thumbnail' },
+		{ label: __('Link Only', 'interactive-related-posts'), value: 'link-only' },
+		{ label: __('Minimal', 'interactive-related-posts'), value: 'minimal' },
 	];
 
 	// Order by options
 	const orderbyOptions = [
-		{ label: __('Date', 'inline-related-posts'), value: 'date' },
-		{ label: __('Title', 'inline-related-posts'), value: 'title' },
-		{ label: __('Random', 'inline-related-posts'), value: 'rand' },
-		{ label: __('Modified', 'inline-related-posts'), value: 'modified' },
+		{ label: __('Date', 'interactive-related-posts'), value: 'date' },
+		{ label: __('Title', 'interactive-related-posts'), value: 'title' },
+		{ label: __('Random', 'interactive-related-posts'), value: 'rand' },
+		{ label: __('Modified', 'interactive-related-posts'), value: 'modified' },
 	];
 
 	// Order options
 	const orderOptions = [
-		{ label: __('Descending', 'inline-related-posts'), value: 'DESC' },
-		{ label: __('Ascending', 'inline-related-posts'), value: 'ASC' },
+		{ label: __('Descending', 'interactive-related-posts'), value: 'DESC' },
+		{ label: __('Ascending', 'interactive-related-posts'), value: 'ASC' },
 	];
 
 	// Add post to selection
@@ -123,16 +123,16 @@ export default function Edit({ attributes, setAttributes, clientId }) {
 		<div {...blockProps}>
 			<InspectorControls>
 				{/* Post Selection Panel */}
-				<PanelBody title={__('Post Selection', 'inline-related-posts')} initialOpen={true}>
+				<PanelBody title={__('Post Selection', 'interactive-related-posts')} initialOpen={true}>
 					<div className="irp-post-selector">
 						<p>
-							{__('Manually select posts or leave empty to show recent posts automatically.', 'inline-related-posts')}
+							{__('Manually select posts or leave empty to show recent posts automatically.', 'interactive-related-posts')}
 						</p>
 
 						{/* Selected Posts */}
 						{selectedPosts.length > 0 && (
 							<div className="irp-selected-posts">
-								<h4>{__('Selected Posts:', 'inline-related-posts')}</h4>
+								<h4>{__('Selected Posts:', 'interactive-related-posts')}</h4>
 								<ul>
 									{selectedPosts.map((post) => (
 										<li key={post.id}>
@@ -142,7 +142,7 @@ export default function Edit({ attributes, setAttributes, clientId }) {
 												isDestructive
 												onClick={() => removePost(post.id)}
 											>
-												{__('Remove', 'inline-related-posts')}
+												{__('Remove', 'interactive-related-posts')}
 											</Button>
 										</li>
 									))}
@@ -151,17 +151,17 @@ export default function Edit({ attributes, setAttributes, clientId }) {
 									isSecondary
 									onClick={() => setAttributes({ selectedPosts: [] })}
 								>
-									{__('Clear All', 'inline-related-posts')}
+									{__('Clear All', 'interactive-related-posts')}
 								</Button>
 							</div>
 						)}
 
 						{/* Search Posts */}
 						<div className="irp-post-search">
-							<h4>{__('Add Posts:', 'inline-related-posts')}</h4>
+							<h4>{__('Add Posts:', 'interactive-related-posts')}</h4>
 							<input
 								type="text"
-								placeholder={__('Search posts...', 'inline-related-posts')}
+								placeholder={__('Search posts...', 'interactive-related-posts')}
 								value={searchTerm}
 								onChange={(e) => setSearchTerm(e.target.value)}
 								className="components-text-control__input"
@@ -183,8 +183,8 @@ export default function Edit({ attributes, setAttributes, clientId }) {
 													onClick={() => addPost(post)}
 												>
 													{isSelected
-														? __('Selected', 'inline-related-posts')
-														: __('Add', 'inline-related-posts')}
+														? __('Selected', 'interactive-related-posts')
+														: __('Add', 'interactive-related-posts')}
 												</Button>
 											</li>
 										);
@@ -197,7 +197,7 @@ export default function Edit({ attributes, setAttributes, clientId }) {
 					{selectedPosts.length === 0 && (
 						<>
 							<RangeControl
-								label={__('Number of Posts', 'inline-related-posts')}
+								label={__('Number of Posts', 'interactive-related-posts')}
 								value={posts}
 								onChange={(value) => setAttributes({ posts: value })}
 								min={1}
@@ -208,16 +208,16 @@ export default function Edit({ attributes, setAttributes, clientId }) {
 				</PanelBody>
 
 				{/* Layout Settings Panel */}
-				<PanelBody title={__('Layout Settings', 'inline-related-posts')}>
+				<PanelBody title={__('Layout Settings', 'interactive-related-posts')}>
 					<SelectControl
-						label={__('Layout Style', 'inline-related-posts')}
+						label={__('Layout Style', 'interactive-related-posts')}
 						value={layout}
 						options={layoutOptions}
 						onChange={(value) => setAttributes({ layout: value })}
 					/>
 
 					<RangeControl
-						label={__('Columns', 'inline-related-posts')}
+						label={__('Columns', 'interactive-related-posts')}
 						value={columns}
 						onChange={(value) => setAttributes({ columns: value })}
 						min={1}
@@ -226,27 +226,27 @@ export default function Edit({ attributes, setAttributes, clientId }) {
 				</PanelBody>
 
 				{/* Display Options Panel */}
-				<PanelBody title={__('Display Options', 'inline-related-posts')} initialOpen={false}>
+				<PanelBody title={__('Display Options', 'interactive-related-posts')} initialOpen={false}>
 					<ToggleControl
-						label={__('Show Excerpt', 'inline-related-posts')}
+						label={__('Show Excerpt', 'interactive-related-posts')}
 						checked={showExcerpt}
 						onChange={(value) => setAttributes({ showExcerpt: value })}
 					/>
 
 					<ToggleControl
-						label={__('Show Date', 'inline-related-posts')}
+						label={__('Show Date', 'interactive-related-posts')}
 						checked={showDate}
 						onChange={(value) => setAttributes({ showDate: value })}
 					/>
 
 					<ToggleControl
-						label={__('Show Author', 'inline-related-posts')}
+						label={__('Show Author', 'interactive-related-posts')}
 						checked={showAuthor}
 						onChange={(value) => setAttributes({ showAuthor: value })}
 					/>
 
 					<ToggleControl
-						label={__('Show Category', 'inline-related-posts')}
+						label={__('Show Category', 'interactive-related-posts')}
 						checked={showCategory}
 						onChange={(value) => setAttributes({ showCategory: value })}
 					/>
@@ -254,16 +254,16 @@ export default function Edit({ attributes, setAttributes, clientId }) {
 
 				{/* Query Settings Panel */}
 				{selectedPosts.length === 0 && (
-					<PanelBody title={__('Query Settings', 'inline-related-posts')} initialOpen={false}>
+					<PanelBody title={__('Query Settings', 'interactive-related-posts')} initialOpen={false}>
 						<SelectControl
-							label={__('Order By', 'inline-related-posts')}
+							label={__('Order By', 'interactive-related-posts')}
 							value={orderby}
 							options={orderbyOptions}
 							onChange={(value) => setAttributes({ orderby: value })}
 						/>
 
 						<SelectControl
-							label={__('Order', 'inline-related-posts')}
+							label={__('Order', 'interactive-related-posts')}
 							value={order}
 							options={orderOptions}
 							onChange={(value) => setAttributes({ order: value })}
@@ -275,7 +275,7 @@ export default function Edit({ attributes, setAttributes, clientId }) {
 			{/* Preview */}
 			<div className="irp-block-preview">
 				<ServerSideRender
-					block="inline-related-posts/related-posts"
+					block="interactive-related-posts/related-posts"
 					attributes={attributes}
 				/>
 			</div>

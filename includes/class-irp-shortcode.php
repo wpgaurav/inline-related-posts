@@ -2,7 +2,7 @@
 /**
  * Shortcode Handler
  *
- * Handles the [inline_related_posts] shortcode
+ * Handles the [interactive_related_posts] shortcode
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -30,7 +30,7 @@ class IRP_Shortcode {
      * Constructor
      */
     private function __construct() {
-        add_shortcode( 'inline_related_posts', array( $this, 'render_shortcode' ) );
+        add_shortcode( 'interactive_related_posts', array( $this, 'render_shortcode' ) );
         add_shortcode( 'irp', array( $this, 'render_shortcode' ) ); // Short alias
     }
 
@@ -38,12 +38,12 @@ class IRP_Shortcode {
      * Render shortcode
      *
      * Usage examples:
-     * [inline_related_posts]
-     * [inline_related_posts ids="1,2,3"]
-     * [inline_related_posts slugs="post-slug-1,post-slug-2"]
-     * [inline_related_posts posts="8" columns="4"]
-     * [inline_related_posts layout="card" show_excerpt="true"]
-     * [inline_related_posts layout="thumbnail" show_date="false"]
+     * [interactive_related_posts]
+     * [interactive_related_posts ids="1,2,3"]
+     * [interactive_related_posts slugs="post-slug-1,post-slug-2"]
+     * [interactive_related_posts posts="8" columns="4"]
+     * [interactive_related_posts layout="card" show_excerpt="true"]
+     * [interactive_related_posts layout="thumbnail" show_date="false"]
      * [irp ids="1,2,3" layout="list"]
      *
      * @param array $atts Shortcode attributes
@@ -76,7 +76,7 @@ class IRP_Shortcode {
                 'class'         => '',
             ),
             $atts,
-            'inline_related_posts'
+            'interactive_related_posts'
         );
 
         // Sanitize and prepare attributes
@@ -121,7 +121,7 @@ class IRP_Shortcode {
      */
     public static function get_help_text() {
         return __(
-            'Usage: [inline_related_posts] or [irp]
+            'Usage: [interactive_related_posts] or [irp]
 
 Attributes:
 - ids: Comma-separated post IDs (e.g., ids="1,2,3")
@@ -139,11 +139,11 @@ Attributes:
 - class: Additional CSS class
 
 Examples:
-[inline_related_posts]
-[inline_related_posts ids="1,2,3"]
-[inline_related_posts layout="card" posts="8" columns="4"]
+[interactive_related_posts]
+[interactive_related_posts ids="1,2,3"]
+[interactive_related_posts layout="card" posts="8" columns="4"]
 [irp slugs="post-one,post-two" layout="list"]',
-            'inline-related-posts'
+            'interactive-related-posts'
         );
     }
 }
