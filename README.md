@@ -1,2 +1,2 @@
-# inline-related-posts
-Intelligently designed Inline Related Posts using ID or slug with shortcode or WordPress Block.
+# interactive-related-posts
+Intelligently designed Interactive Related Posts using ID or slug with shortcode or WordPress Block.
