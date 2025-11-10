@@ -103,8 +103,8 @@ class IRP_Template_Loader {
     private static function load_template( $layout, $post_data, $args ) {
         // Allow themes to override templates
         $template_path = locate_template( array(
-            'inline-related-posts/' . $layout . '.php',
-            'inline-related-posts/templates/' . $layout . '.php',
+            'interactive-related-posts/' . $layout . '.php',
+            'interactive-related-posts/templates/' . $layout . '.php',
         ) );
 
         // Use plugin template if theme template not found
@@ -132,7 +132,7 @@ class IRP_Template_Loader {
      * @return string HTML output
      */
     private static function render_no_posts_message() {
-        return '<div class="irp-no-posts">' . esc_html__( 'No posts found.', 'inline-related-posts' ) . '</div>';
+        return '<div class="irp-no-posts">' . esc_html__( 'No posts found.', 'interactive-related-posts' ) . '</div>';
     }
 
     /**

@@ -69,7 +69,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
             <div class="irp-card-footer">
                 <a href="<?php echo esc_url( $post_data['permalink'] ); ?>" class="irp-read-more">
-                    <?php esc_html_e( 'Read More', 'inline-related-posts' ); ?>
+                    <?php esc_html_e( 'Read More', 'interactive-related-posts' ); ?>
                     <span class="irp-arrow">→</span>
                 </a>
             </div>

@@ -22,15 +22,15 @@ const icon = (
 /**
  * Register the block
  */
-registerBlockType('inline-related-posts/related-posts', {
-	title: __('Inline Related Posts', 'inline-related-posts'),
-	description: __('Display related posts with customizable layouts', 'inline-related-posts'),
+registerBlockType('interactive-related-posts/related-posts', {
+	title: __('Interactive Related Posts', 'interactive-related-posts'),
+	description: __('Display related posts with customizable layouts', 'interactive-related-posts'),
 	category: 'widgets',
 	icon: icon,
 	keywords: [
-		__('related', 'inline-related-posts'),
-		__('posts', 'inline-related-posts'),
-		__('inline', 'inline-related-posts'),
+		__('related', 'interactive-related-posts'),
+		__('posts', 'interactive-related-posts'),
+		__('interactive', 'interactive-related-posts'),
 	],
 	supports: {
 		html: false,

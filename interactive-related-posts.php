@@ -1,14 +1,14 @@
 <?php
 /**
- * Plugin Name: Inline Related Posts
- * Plugin URI: https://github.com/wpgaurav/inline-related-posts
- * Description: Display related posts inline using shortcode or WordPress blocks with multiple layout options. Select posts manually by ID or slug, or show recent posts automatically.
+ * Plugin Name: Interactive Related Posts
+ * Plugin URI: https://github.com/wpgaurav/interactive-related-posts
+ * Description: Display related posts interactively using shortcode or WordPress blocks with multiple layout options. Select posts manually by ID or slug, or show recent posts automatically.
  * Version: 1.0.0
  * Author: WP Gaurav
  * Author URI: https://github.com/wpgaurav
  * License: GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain: inline-related-posts
+ * Text Domain: interactive-related-posts
  * Domain Path: /languages
  */
 
@@ -35,7 +35,7 @@ define( 'IRP_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 /**
  * Main plugin class
  */
-class Inline_Related_Posts {
+class Interactive_Related_Posts {
 
     /**
      * Instance of this class
@@ -94,7 +94,7 @@ class Inline_Related_Posts {
      */
     public function enqueue_styles() {
         wp_enqueue_style(
-            'inline-related-posts',
+            'interactive-related-posts',
             IRP_PLUGIN_URL . 'assets/css/styles.css',
             array(),
             IRP_VERSION,
@@ -106,9 +106,9 @@ class Inline_Related_Posts {
 /**
  * Initialize the plugin
  */
-function inline_related_posts() {
-    return Inline_Related_Posts::get_instance();
+function interactive_related_posts() {
+    return Interactive_Related_Posts::get_instance();
 }
 
 // Kick off the plugin
-inline_related_posts();
+interactive_related_posts();

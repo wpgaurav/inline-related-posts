@@ -2,7 +2,7 @@
 /**
  * Gutenberg Block Handler
  *
- * Handles the WordPress Block for inline related posts
+ * Handles the WordPress Block for interactive related posts
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -45,12 +45,12 @@ class IRP_Block {
 
         // Register block
         register_block_type(
-            'inline-related-posts/related-posts',
+            'interactive-related-posts/related-posts',
             array(
                 'api_version'     => 2,
                 'editor_script'   => 'irp-block-editor',
                 'editor_style'    => 'irp-block-editor-style',
-                'style'           => 'inline-related-posts',
+                'style'           => 'interactive-related-posts',
                 'render_callback' => array( $this, 'render_block' ),
                 'attributes'      => $this->get_block_attributes(),
             )

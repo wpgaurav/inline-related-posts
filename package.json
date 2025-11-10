@@ -1,7 +1,7 @@
 {
-  "name": "inline-related-posts",
+  "name": "interactive-related-posts",
   "version": "1.0.0",
-  "description": "Display related posts inline using shortcode or WordPress blocks",
+  "description": "Display related posts interactively using shortcode or WordPress blocks",
   "main": "blocks/build/index.js",
   "scripts": {
     "build": "wp-scripts build blocks/src/index.js --output-path=blocks/build",
