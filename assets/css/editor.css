@@ -1,0 +1,171 @@
+/**
+ * Interactive Related Posts - Block Editor Styles
+ *
+ * Author: WP Gaurav
+ * Version: 1.0.0
+ */
+
+/* ===========================
+   Block Editor Container
+   =========================== */
+
+.irp-block-editor {
+	border: 1px solid #e2e4e7;
+	border-radius: 4px;
+	padding: 1rem;
+	background: #fff;
+}
+
+.irp-block-preview {
+	margin-top: 1rem;
+}
+
+/* ===========================
+   Post Selector
+   =========================== */
+
+.irp-post-selector {
+	padding: 1rem 0;
+}
+
+.irp-post-selector p {
+	margin: 0 0 1rem 0;
+	font-size: 0.9rem;
+	color: #757575;
+}
+
+.irp-post-selector h4 {
+	margin: 1rem 0 0.5rem 0;
+	font-size: 0.875rem;
+	font-weight: 600;
+	color: #1e1e1e;
+}
+
+/* ===========================
+   Selected Posts List
+   =========================== */
+
+.irp-selected-posts {
+	margin-bottom: 1.5rem;
+	padding: 1rem;
+	background: #f0f0f0;
+	border-radius: 4px;
+}
+
+.irp-selected-posts ul {
+	list-style: none;
+	margin: 0.5rem 0 1rem 0;
+	padding: 0;
+}
+
+.irp-selected-posts li {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5rem;
+	margin-bottom: 0.5rem;
+	background: #fff;
+	border-radius: 4px;
+	border: 1px solid #ddd;
+}
+
+.irp-selected-posts li span {
+	flex: 1;
+	font-size: 0.875rem;
+}
+
+.irp-selected-posts li button {
+	margin-left: 0.5rem;
+}
+
+/* ===========================
+   Post Search
+   =========================== */
+
+.irp-post-search {
+	margin-top: 1rem;
+}
+
+.irp-post-search input {
+	width: 100%;
+	margin-bottom: 1rem;
+}
+
+.irp-posts-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	max-height: 300px;
+	overflow-y: auto;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+.irp-posts-list li {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.75rem;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+.irp-posts-list li:last-child {
+	border-bottom: none;
+}
+
+.irp-posts-list li:hover {
+	background: #f9f9f9;
+}
+
+.irp-posts-list li span {
+	flex: 1;
+	font-size: 0.875rem;
+	color: #1e1e1e;
+}
+
+.irp-posts-list li button {
+	margin-left: 0.5rem;
+}
+
+/* ===========================
+   Inspector Controls
+   =========================== */
+
+.components-panel__body .irp-post-selector {
+	padding: 0;
+}
+
+/* Scrollbar styling for post list */
+.irp-posts-list::-webkit-scrollbar {
+	width: 8px;
+}
+
+.irp-posts-list::-webkit-scrollbar-track {
+	background: #f0f0f0;
+	border-radius: 4px;
+}
+
+.irp-posts-list::-webkit-scrollbar-thumb {
+	background: #ccc;
+	border-radius: 4px;
+}
+
+.irp-posts-list::-webkit-scrollbar-thumb:hover {
+	background: #999;
+}
+
+/* ===========================
+   Responsive
+   =========================== */
+
+@media (max-width: 768px) {
+	.irp-selected-posts li {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.irp-selected-posts li button {
+		margin-top: 0.5rem;
+		margin-left: 0;
+	}
+}
